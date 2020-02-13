@@ -3,7 +3,7 @@ metadata:
   name: windows
 spec:
   containers:
-  - name: jnlp1
+  - name: "jnlp"
     image: jenkins/jnlp-agent:latest-windows
     tty: true
   - name: windows-dotnet
