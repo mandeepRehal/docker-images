@@ -1,10 +1,14 @@
 pipeline {
-  agent 'windows-pod-9hqvx-70v1x'
+  agent none
   options { 
     buildDiscarder(logRotator(numToKeepStr: '2'))
     skipDefaultCheckout true
   }
   stages {
+	stage('GetNodeName') {
+		def node_name = "${NODE_NAME}"
+		echo "The Node Name is: ${node_name}"
+	}
     stage('Test-windows') {
       agent {
         kubernetes {
