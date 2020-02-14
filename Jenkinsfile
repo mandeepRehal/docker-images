@@ -1,5 +1,5 @@
 pipeline {
-  agent none
+  agent 'windows-pod-9hqvx-70v1x'
   options { 
     buildDiscarder(logRotator(numToKeepStr: '2'))
     skipDefaultCheckout true
